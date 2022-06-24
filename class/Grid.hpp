@@ -29,7 +29,7 @@ class Grid {
 
     protected:
     private:
-        std::array<std::array<Block, 4>, 4> _grid;
+        std::array<std::array<Block, SIZE_X>, SIZE_Y> _grid;
 };
 
 }

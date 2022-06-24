@@ -50,12 +50,18 @@ int main(int argc, char const *argv[])
     }
 
     /* SFML render */
-    sf::RenderWindow window(sf::VideoMode(800, 800), "Panel!");
+    
+    //Render window at the screen's center
+    sf::VideoMode desktop = sf::VideoMode::getDesktopMode();
+    sf::RenderWindow window(sf::VideoMode(WINDOW_SIZE_X, WINDOW_SIZE_Y), "Panel!");
+    window.setPosition(sf::Vector2i(desktop.width / 2 - (WINDOW_SIZE_X / 2), desktop.height / 2 - (WINDOW_SIZE_Y / 2)));
+
+    //Setting framerate
+    window.setFramerateLimit(60);
 
     while (window.isOpen())
     {
         sf::Event event;
-
 
         while (window.pollEvent(event))
         {
