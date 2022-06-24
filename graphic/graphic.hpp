@@ -20,5 +20,7 @@
 #define WINDOW_SIZE_X 800
 #define PANEL_SIZE_X 400
 #define PANEL_SIZE_Y 400
+#define TEXT_SIZE 48
+#define FRAMERATE 120
 
 void draw(sf::RenderWindow & window);
